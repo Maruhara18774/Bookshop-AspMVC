@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using XemDSSach.Models;
+
+namespace XemDSSach.Controllers
+{
+    public class OrderController : Controller
+    {
+        BOOKSHOPEntities db = new BOOKSHOPEntities();
+        // GET: Order
+        public RedirectToRouteResult Index()
+        {
+            return RedirectToRoute(new { controller = "Order", action = "DanhSachDonHang" });
+        }
+        public ActionResult DanhSachDonHang()
+        {
+            return View(db.DONHANGs.ToList());
+        }
+    }
+}
