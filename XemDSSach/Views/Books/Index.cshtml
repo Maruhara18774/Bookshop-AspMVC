@@ -13,7 +13,10 @@
 </head>
 <body>
     <p>
-        @Html.ActionLink("Create New", "Create")
+        <div class="btn btn-default" style="margin:10px 10px 10px 50px">
+            @Html.ActionLink("Thêm sách", "Create")
+        </div>
+        
     </p>
     <table class="table">
         <tr>
@@ -42,22 +45,23 @@
                 @Html.DisplayNameFor(model => model.MOTA)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ID_NXB)
+                @Html.DisplayName("Nhà xuất bản")
+
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ID_TACGIA)
+                @Html.DisplayName("Tác giả")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ID_NCC)
+                @Html.DisplayName("Nhà cung cấp")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ID_THELOAI)
+                @Html.DisplayName("Thể loại")
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.KHOILUONG)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ID_BANGGIA)
+                @Html.DisplayName("Giá bán")
             </th>
             <th></th>
         </tr>
@@ -89,22 +93,22 @@
                 @Html.DisplayFor(modelItem => item.MOTA)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ID_NXB)
+                @Html.DisplayFor(modelItem => item.NHAXUATBAN.TEN_NHAXUATBAN)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ID_TACGIA)
+                @Html.DisplayFor(modelItem => item.TACGIA.TEN_TACGIA)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ID_NCC)
+                @Html.DisplayFor(modelItem => item.NHACUNGCAP.TEN_NHACUNGCAP)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ID_THELOAI)
+                @Html.DisplayFor(modelItem => item.THELOAI.TEN_THELOAI)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.KHOILUONG)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ID_BANGGIA)
+                @Html.DisplayFor(modelItem => item.BANGGIA.GIA_BAN)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit",new { id=item.ID_SACH }) |
