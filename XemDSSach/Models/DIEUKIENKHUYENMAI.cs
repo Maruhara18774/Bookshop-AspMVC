@@ -21,8 +21,8 @@ namespace XemDSSach.Models
         }
     
         public int ID_DIEUKIEN { get; set; }
-        public Nullable<System.DateTime> THOIGIAN_BATDAU { get; set; }
-        public Nullable<System.DateTime> THOIGIAN_KETTHUC { get; set; }
+        public string THOIGIAN_BATDAU { get; set; }
+        public string THOIGIAN_KETTHUC { get; set; }
         public Nullable<double> MUC_TIEUDUNG { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

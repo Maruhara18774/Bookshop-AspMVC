@@ -19,9 +19,12 @@ namespace XemDSSach.Models
         public SACH()
         {
             this.ANHBIAs = new HashSet<ANHBIA>();
+            this.BANGGIAs = new HashSet<BANGGIA>();
             this.CHITIETDONHANGs = new HashSet<CHITIETDONHANG>();
+            this.CHITIETHOADONs = new HashSet<CHITIETHOADON>();
             this.FEEDBACKs = new HashSet<FEEDBACK>();
         }
+
         [Display(Name = "Mã sách")]
         public int ID_SACH { get; set; }
 
@@ -32,8 +35,7 @@ namespace XemDSSach.Models
         public string LOAI_BIA { get; set; }
 
         [Display(Name = "Ngày xuất bản")]
-        public Nullable<System.DateTime> NGAY_XUATBAN { get; set; }
-
+        public string NGAY_XUATBAN { get; set; }
         [Display(Name = "Số lượng tồn")]
         public Nullable<short> SOLUONG_TON { get; set; }
 
@@ -56,16 +58,22 @@ namespace XemDSSach.Models
         public Nullable<int> ID_NCC { get; set; }
         [Display(Name = "Mã thể loại")]
         public Nullable<int> ID_THELOAI { get; set; }
+
         [Display(Name = "Khối lượng")]
         public Nullable<double> KHOILUONG { get; set; }
-        [Display(Name = "Mã bảng giá")]
-        public Nullable<int> ID_BANGGIA { get; set; }
+        [Display(Name ="Giá bìa")]
+        public Nullable<double> GIA_BIA { get; set; }
+        [Display(Name ="Giá bán")]
+        public Nullable<double> GIA_BAN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ANHBIA> ANHBIAs { get; set; }
-        public virtual BANGGIA BANGGIA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BANGGIA> BANGGIAs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETDONHANG> CHITIETDONHANGs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FEEDBACK> FEEDBACKs { get; set; }
         public virtual NHACUNGCAP NHACUNGCAP { get; set; }

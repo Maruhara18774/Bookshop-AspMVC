@@ -25,7 +25,6 @@ namespace XemDSSach.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SACH> SACHes { get; set; }
-
         public List<NHACUNGCAP> ListNCC { get; set; }
     }
 }

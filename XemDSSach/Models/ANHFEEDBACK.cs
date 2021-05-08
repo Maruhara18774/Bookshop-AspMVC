@@ -23,7 +23,7 @@ namespace XemDSSach.Models
 
         [Display(Name = "Ảnh")]
         public string ANH { get; set; }
-    
+
         public virtual FEEDBACK FEEDBACK { get; set; }
     }
 }

@@ -12,23 +12,24 @@ namespace XemDSSach.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class FEEDBACK
+    public partial class HOADON
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public FEEDBACK()
+        public HOADON()
         {
-            this.ANHFEEDBACKs = new HashSet<ANHFEEDBACK>();
+            this.CHITIETHOADONs = new HashSet<CHITIETHOADON>();
         }
     
-        public int ID_FEEDBACK { get; set; }
-        public Nullable<int> ID_SACH { get; set; }
-        public Nullable<bool> XACNHAN_MUAHANG { get; set; }
-        public Nullable<byte> DIEM_DANHGIA { get; set; }
-        public string THOIGIAN_DANG { get; set; }
-        public string NOIDUNG { get; set; }
+        public int ID_HOADON { get; set; }
+        public Nullable<int> ID_TTKH { get; set; }
+        public Nullable<int> ID_TRANGTHAI { get; set; }
+        public Nullable<double> TONGTIEN { get; set; }
+        public Nullable<int> ID_DONHANG { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ANHFEEDBACK> ANHFEEDBACKs { get; set; }
-        public virtual SACH SACH { get; set; }
+        public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }
+        public virtual DONHANG DONHANG { get; set; }
+        public virtual TRANGTHAIDONHANG TRANGTHAIDONHANG { get; set; }
+        public virtual THONGTINKHACHHANG THONGTINKHACHHANG { get; set; }
     }
 }

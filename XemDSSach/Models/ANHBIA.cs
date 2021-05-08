@@ -17,14 +17,14 @@ namespace XemDSSach.Models
 
     public partial class ANHBIA
     {
-        [Display(Name ="Mã ảnh")]
+        [Display(Name = "Mã ảnh")]
         public int ID_ANH { get; set; }
         [Display(Name = "Mã sách")]
         public Nullable<int> ID_SACH { get; set; }
 
         [Display(Name = "Ảnh")]
         public string ANH { get; set; }
-    
+
 
         public virtual SACH SACH { get; set; }
 

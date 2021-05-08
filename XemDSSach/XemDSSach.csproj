@@ -3687,6 +3687,9 @@
     <Compile Include="Models\CHITIETDONHANG.cs">
       <DependentUpon>BookshopModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CHITIETHOADON.cs">
+      <DependentUpon>BookshopModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DIEUKIENKHUYENMAI.cs">
       <DependentUpon>BookshopModel.tt</DependentUpon>
     </Compile>
@@ -3697,6 +3700,9 @@
       <DependentUpon>BookshopModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HINHANHKHUYENMAI.cs">
+      <DependentUpon>BookshopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HOADON.cs">
       <DependentUpon>BookshopModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KHUYENMAI.cs">
